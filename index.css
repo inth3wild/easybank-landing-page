@@ -7,12 +7,27 @@
   border: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --grey: grey;
+
+  --title-font-size: 2rem;
+}
+
 img {
   width: 100%;
   height: 100%;
 }
 body {
   font-family: "Public Sans", sans-serif;
+  font-size: 18px;
   min-height: 100vh;
   position: relative;
 }
@@ -37,12 +52,68 @@ header {
 /* --- Mobile Nav */
 
 /* Main Sections --- */
-section.hero-image {
+.hero-image {
   background: url("./images/bg-intro-mobile.svg") no-repeat;
   margin-top: -114px;
 }
 
+section:not(.hero-image) {
+  padding: 3rem 1.5rem;
+}
+
 .hero-writeup {
+  margin-top: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.hero-writeup p:nth-of-type(1) {
+  font-size: var(--title-font-size);
+}
+.hero-writeup p:nth-of-type(2) {
+  color: var(--grey);
+}
+
+.features {
+  background-color: var(--light-grayish-blue);
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.features-title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.features-title p:nth-of-type(1) {
+  font-size: var(--title-font-size);
+}
+.features-title p:nth-of-type(2) {
+  color: var(--grey);
+}
+
+.features-cards {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.5rem;
+}
+
+.features-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+.feature-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto;
+}
+.features-card h3 {
+  font-weight: normal;
+}
+.features-card p {
+  color: var(--grey);
 }
 /* --- Main Sections */
 
@@ -52,3 +123,14 @@ footer {
 }
 
 /* --- Footer */
+
+/* Preset styles */
+button {
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  margin: 0 auto;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(to right, var(--lime-green), var(--grayish-blue));
+}
