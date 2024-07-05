@@ -161,9 +161,48 @@ section:not(.hero-image) {
 
 /* Footer --- */
 footer {
-  background-color: burlywood;
+  margin-top: 2rem;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  color: var(--white);
 }
 
+.footer-icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.footer-social-icons {
+  display: flex;
+  column-gap: 1rem;
+}
+.footer-text-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.footer-text-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.footer-cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+small {
+  color: var(--grey);
+}
+.author-link {
+  color: var(--white);
+}
 /* --- Footer */
 
 /* Preset styles */
@@ -175,4 +214,5 @@ button {
   font-size: 14px;
   font-weight: 600;
   background: linear-gradient(to right, var(--lime-green), var(--grayish-blue));
+  cursor: pointer;
 }
