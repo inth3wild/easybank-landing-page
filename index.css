@@ -56,7 +56,7 @@ header {
 /* Main Sections --- */
 .hero-image {
   background: url("./images/bg-intro-mobile.svg") no-repeat;
-  margin-top: -114px;
+  margin-top: calc(-35.5%);
 }
 
 section:not(.hero-image) {
