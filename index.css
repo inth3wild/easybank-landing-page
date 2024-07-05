@@ -5,6 +5,8 @@
 *::after {
   margin: 0;
   border: 0;
+  padding: 0;
+  list-style: none;
   box-sizing: border-box;
 }
 
@@ -181,15 +183,19 @@ footer {
   column-gap: 1rem;
 }
 .footer-text-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
   text-align: center;
+}
+.footer-text-list {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-.footer-text-block {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+.footer-text-list li a {
+  text-decoration: none;
+  color: var(--white);
 }
 .footer-cta-container {
   display: flex;
