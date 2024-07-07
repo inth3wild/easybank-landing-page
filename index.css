@@ -51,15 +51,18 @@ header {
   justify-content: space-between;
   padding: 1rem;
 }
+.desktop-nav {
+  display: none; /* Hide desktop nav*/
+}
 /* --- Mobile Nav */
 
 /* Main Sections --- */
-.hero-image {
-  background: url("./images/bg-intro-mobile.svg") no-repeat;
+.mobile-hero-image {
+  background: url("./images/bg-intro-mobile.svg") center/contain no-repeat;
   margin-top: calc(-35.5%);
 }
 
-section:not(.hero-image) {
+section:not(.mobile-hero-image) {
   padding: 3rem 1.5rem;
 }
 
@@ -210,6 +213,44 @@ small {
   color: var(--white);
 }
 /* --- Footer */
+
+/* Desktop Responsiveness */
+@media screen and (min-width: 800px) {
+  /* Deskto Nav --- */
+  header {
+    height: auto;
+  }
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .desktop-nav-links {
+    display: flex;
+    column-gap: 1.3rem;
+  }
+  .desktop-nav-links li a {
+    text-decoration: none;
+    color: var(--grey);
+  }
+  /* --- Desktop Nav */
+
+  /* Main Sections --- */
+  main {
+    position: relative;
+  }
+  .mobile-hero-image {
+    display: none;
+  }
+  /* --- Main Sections */
+}
 
 /* Preset styles */
 button {
