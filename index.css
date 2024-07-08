@@ -32,6 +32,7 @@ body {
   font-size: 18px;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 header {
   height: 62px;
@@ -57,12 +58,15 @@ header {
 /* --- Mobile Nav */
 
 /* Main Sections --- */
-.mobile-hero-image {
+.hero-image {
   background: url("./images/bg-intro-mobile.svg") center/contain no-repeat;
   margin-top: calc(-35.5%);
 }
+.desktop-hero-container {
+  display: none; /* Hide desktop hero container in mobile view */
+}
 
-section:not(.mobile-hero-image) {
+section:not(.hero-image) {
   padding: 3rem 1.5rem;
 }
 
@@ -243,11 +247,24 @@ small {
   /* --- Desktop Nav */
 
   /* Main Sections --- */
-  main {
-    position: relative;
-  }
-  .mobile-hero-image {
+  .mobile-hero-container {
     display: none;
+  }
+  .desktop-hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .hero-image {
+    background: url("./images/bg-intro-desktop.svg") 0px / contain no-repeat;
+    margin-top: calc(-7.65%);
+    margin-right: -11%;
+  }
+  .hero-writeup {
+    max-width: 500px;
+    text-align: left;
   }
   /* --- Main Sections */
 }
